@@ -9,13 +9,18 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+subprojects {
+    group = rootProject.group
+    version = rootProject.version
 
-    implementation(project(":modules:a:a-api"))
-    implementation(project(":modules:a:a-impl"))
-    implementation(project(":modules:b:impl"))
+    apply(plugin = "java")
+}
+
+dependencies {
+    implementation(project(":modules:a:api"))
+    implementation(project(":modules:a:impl"))
+    implementation(project(":modules:b:api2"))
+    implementation(project(":modules:b:impl2"))
 }
 
 tasks.getByName<Test>("test") {

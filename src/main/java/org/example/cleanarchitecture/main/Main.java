@@ -12,7 +12,7 @@ public class Main {
         System.out.println("A value: " + a.getValue());
 
         BImpl b = new BImpl(a);
-        System.out.println("B value: " + b.myValue());
+        System.out.println("B value: " + b.getValue());
     }
 
     private static AApi create() {
