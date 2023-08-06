@@ -1,27 +1,29 @@
 package org.example.cleanarchitecture.main;
 
 import org.example.cleanarchitecture.a.api.AApi;
-import org.example.cleanarchitecture.a.impl.AImpl;
-import org.example.cleanarchitecture.b.impl.BImpl;
-import org.springframework.context.annotation.Configuration;
+import org.example.cleanarchitecture.a.impl.AConfiguration;
+import org.example.cleanarchitecture.b.api.BApi;
+import org.example.cleanarchitecture.b.impl.BConfiguration;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 
 
+@SpringBootApplication
+@Import({AConfiguration.class, BConfiguration.class})
 public class Main {
 
     public static void main(String[] args) {
-        AApi a = create();
-        System.out.println("A value: " + a.getValue());
-
-        BImpl b = new BImpl(a);
-        System.out.println("B value: " + b.getValue());
+        SpringApplication.run(Main.class, args);
     }
 
-    private static AApi create() {
-        return new AImpl();
-    }
-
-    @Configuration
-    class x {
-
+    @Bean
+    public CommandLineRunner commandLineRunner(AApi a, BApi b) {
+        return args -> {
+            System.out.println("A value: " + a.getValue());
+            System.out.println("B value: " + b.getValue());
+        };
     }
 }
