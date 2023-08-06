@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("java-library")
 }
 
 group = "org.example"
@@ -13,13 +13,11 @@ subprojects {
     group = rootProject.group
     version = rootProject.version
 
-    apply(plugin = "java")
+    apply(plugin = "java-library")
 }
 
 dependencies {
-    implementation(project(":modules:a:api"))
     implementation(project(":modules:a:impl"))
-    implementation(project(":modules:b:api2"))
     implementation(project(":modules:b:impl2"))
 }
 
