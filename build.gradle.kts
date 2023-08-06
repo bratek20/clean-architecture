@@ -12,23 +12,6 @@ repositories {
     mavenCentral()
 }
 
-//dependencyManagement {
-//    imports {
-//        mavenBom("org.springframework.boot:spring-boot-dependencies:3.1.2")
-//    }
-//}
-
-dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-
-    implementation(project(":modules:a-impl"))
-    implementation(project(":modules:b-impl"))
-}
-
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
-}
-
 subprojects {
     group = rootProject.group
     version = rootProject.version
