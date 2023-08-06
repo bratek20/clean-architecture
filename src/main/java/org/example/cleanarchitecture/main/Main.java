@@ -3,6 +3,7 @@ package org.example.cleanarchitecture.main;
 import org.example.cleanarchitecture.a.api.AApi;
 import org.example.cleanarchitecture.a.impl.AImpl;
 import org.example.cleanarchitecture.b.impl.BImpl;
+import org.springframework.context.annotation.Configuration;
 
 
 public class Main {
@@ -17,5 +18,10 @@ public class Main {
 
     private static AApi create() {
         return new AImpl();
+    }
+
+    @Configuration
+    class x {
+
     }
 }
