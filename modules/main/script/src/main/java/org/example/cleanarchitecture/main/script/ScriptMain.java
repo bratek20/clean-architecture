@@ -1,4 +1,4 @@
-package org.example.cleanarchitecture.main;
+package org.example.cleanarchitecture.main.script;
 
 import org.example.cleanarchitecture.a.api.AApi;
 import org.example.cleanarchitecture.a.impl.AConfiguration;
@@ -13,10 +13,10 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
 @Import({AConfiguration.class, BConfiguration.class})
-public class Main {
+public class ScriptMain {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(ScriptMain.class, args);
     }
 
     @Bean
