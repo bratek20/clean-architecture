@@ -17,8 +17,8 @@ subprojects {
 }
 
 dependencies {
-    implementation(project(":modules:a:impl"))
-    implementation(project(":modules:b:impl2"))
+    implementation(project(":modules:a-impl"))
+    implementation(project(":modules:b-impl"))
 }
 
 tasks.getByName<Test>("test") {
