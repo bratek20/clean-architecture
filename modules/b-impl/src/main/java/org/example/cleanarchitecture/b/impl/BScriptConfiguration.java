@@ -18,10 +18,10 @@ public class BScriptConfiguration extends ScriptConfiguration {
         return new BImpl(a);
     }
 
-    @Bean
-    public BController bController() {
-        return new BController();
-    }
+//    @Bean
+//    public BController bController() {
+//        return new BController();
+//    }
 
     @Override
     public CommandLineRunner commandLineRunner() {

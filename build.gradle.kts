@@ -13,6 +13,10 @@ repositories {
     mavenCentral()
 }
 
+springBoot {
+    mainClass.set("org.example.cleanarchitecture.Main")
+}
+
 subprojects {
     group = rootProject.group
     version = rootProject.version
@@ -34,5 +38,13 @@ subprojects {
     dependencies {
         implementation("org.springframework:spring-context")
     }
+}
+
+dependencies {
+    implementation(project(":modules:a-impl"))
+    implementation(project(":modules:b-impl"))
+
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
 }
 
