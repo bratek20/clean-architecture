@@ -4,4 +4,5 @@ dependencies {
     implementation(project(":modules:shared"))
 
     implementation("org.springframework.boot:spring-boot")
+    implementation("org.springframework:spring-web")
 }

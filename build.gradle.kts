@@ -6,6 +6,7 @@ plugins {
 
     id("org.springframework.boot") version "3.1.2"
     id("io.spring.dependency-management") version "1.1.2"
+    id("io.freefair.lombok") version "8.2.2"
 }
 
 repositories {
@@ -18,6 +19,7 @@ subprojects {
 
     apply(plugin = "java-library")
     apply(plugin = "io.spring.dependency-management")
+    apply(plugin = "io.freefair.lombok")
 
     repositories {
         mavenCentral()
