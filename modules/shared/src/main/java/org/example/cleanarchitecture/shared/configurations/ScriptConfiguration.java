@@ -1,11 +1,11 @@
-package org.example.cleanarchitecture.shared;
+package org.example.cleanarchitecture.shared.configurations;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public abstract class ScriptConfiguration {
+public interface ScriptConfiguration {
     @Bean
-    public abstract CommandLineRunner commandLineRunner();
+    CommandLineRunner commandLineRunner();
 }

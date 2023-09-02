@@ -1,7 +1,7 @@
 package org.example.cleanarchitecture.main.script;
 
 import org.example.cleanarchitecture.a.impl.AConfiguration;
-import org.example.cleanarchitecture.b.impl.BScriptConfiguration;
+import org.example.cleanarchitecture.b.impl.configurations.BScriptConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;

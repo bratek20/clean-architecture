@@ -8,6 +8,7 @@ public class BImpl implements BApi {
 
     public BImpl(AApi a) {
         this.a = a;
+        System.out.println("BImpl created");
     }
 
     @Override
